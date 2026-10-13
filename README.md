@@ -1,221 +1,177 @@
-# Awesome-External-Data-Virtualization
+<div align="center">
 
-## Top External Data Virtualization Ecosystem
+![Awesome External Data Virtualization](assets/banner.svg)
 
+# 🌐 Awesome External Data Virtualization
 
+**A Curated Directory of SaaS Platforms & Open-Source Projects for Zero-Copy Data Virtualization, Federated Queries & Logical Data Fabrics**
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-External-Data-Virtualization/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-External-Data-Virtualization?style=flat-square&color=gold&logo=github" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-External-Data-Virtualization/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-External-Data-Virtualization?style=flat-square&color=blue" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-External-Data-Virtualization/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-External-Data-Virtualization/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-*Focused on Federated Queries, Zero-Copy Integration & Logical Data Layers*  
-
-**Last updated: March 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **External Data Virtualization**. These tools enable organizations to query data across disparate sources—databases, data lakes, APIs, and SaaS applications—without physically moving or replicating it, creating a unified logical data layer for analytics and applications.
-
-
-
-**Examples** include Salesforce Connect, Denodo Platform, Starburst Galaxy, Dremio Cloud, CData Connect Cloud, IBM Cloud Pak for Data, Presto Cloud, Trino, TIBCO Data Virtualization, and AWS Athena (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, federated query engines, and open data virtualization—ideal for data engineers, architects, and developers seeking transparent, vendor-independent data access.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Salesforce Connect](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/platform_connect_intro.htm)**  
-
-  Data virtualization layer within Salesforce that surfaces external data as External Objects. Supports OData, GraphQL, and custom adapters. Zero-copy architecture—data is queried live from source systems only when needed, never stored or cached by Salesforce. Avoids ETL replication and keeps data compliant with data movement regulations. Works with AWS RDS via AppSync, DynamoDB, and any GraphQL API .
-
-
-
-- **[Denodo Platform](https://www.denodo.com/)**  
-
-  Enterprise data virtualization platform with 200+ connectors. Provides a logical data layer for integrating, managing, and delivering data across warehouses, lakes, and cloud applications without replication. Features GenAI assistant, advanced semantics, and universal data services (SQL, REST, GraphQL). Agora cloud service separates control plane (managed by Denodo) from execution plane (runs in customer's cloud) for data sovereignty .
-
-
-
-- **[Starburst Galaxy](https://www.starburst.io/)**  
-
-  Fully managed Trino service for federated analytics across data lakes, databases, and warehouses. Features query federation, data lake analytics on Iceberg/Delta/Hudi, and cross-source joins without data movement.
-
-
-
-- **[Dremio Cloud](https://www.dremio.com/)**  
-
-  Fully managed lakehouse with data virtualization capabilities. Apache Iceberg-based catalog with REST API compatibility. Features federated queries across diverse sources, AI-powered SQL functions, autonomous reflections, elastic engines that scale to zero, and hosted MCP server for AI agents. Consumption-based pricing (DCUs) with free trial credits .
-
-
-
-- **[CData Connect Cloud](https://www.cdata.com/cloud/)**  
-
-  Data Connectivity-as-a-Service platform with 300+ source connectors and 100+ destination integrations. Provides live, real-time data access without ETL pipelines or data replication. Virtual datasets blend data across sources. Exposes data via RESTful APIs, OData, and standard database protocols (TDS). SOC2 compliant with granular access controls. AI SQL query generator for natural language querying .
-
-
-
-- **[IBM Cloud Pak for Data](https://www.ibm.com/products/cloud-pak-for-data)**  
-
-  Enterprise data platform with Data Virtualization service. Accesses physical data from multiple sources through a single virtual semantic layer without moving or copying. Supports dozens of relational and non-relational sources. Integrates with IBM Knowledge Catalog for governed data publishing. Query virtual objects via built-in SQL editor or consume in dashboards, catalogs, and applications .
-
-
-
-- **[Presto Cloud](https://prestodb.io/)**  
-
-  Managed distributed SQL query engine for big data. Originally designed at Facebook as successor to Hive/MapReduce for interactive queries on multi-petabyte warehouses. SQL-on-Anything architecture with pluggable connectors for HDFS, S3, relational databases, NoSQL, and Kafka. Low-latency startup for interactive analytics .
-
-
-
-- **[Trino](https://trino.io/)**  
-
-  Open-source distributed SQL query engine for federated analytics against heterogeneous data sources. Queries gigabytes to petabytes from multiple sources. Adaptive multi-tenant system running hundreds of concurrent queries, scaling to thousands of workers. Not a general-purpose database—designed for OLAP and data warehousing workloads .
-
-
-
-- **[TIBCO Data Virtualization](https://www.tibco.com/products/data-virtualization)**  
-
-  Enterprise data virtualization platform with 350+ pre-built connectors. Creates a single logical data layer that is governed, secure, and self-service. Time-to-solution 5–10X faster than traditional ETL. Features pushdown engine, MPP scaling, caching options, and Studio design tool. Customers report up to 75% reduced data access costs .
-
-
-
-- **[AWS Athena](https://aws.amazon.com/athena/)**  
-
-  Serverless interactive query service for analyzing data directly in Amazon S3 using standard SQL. Also supports Apache Spark without infrastructure management. Pay only for queries run. Scales automatically for parallel query execution on large datasets .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Trino](https://github.com/trinodb/trino)**  
-
-  Distributed SQL query engine (Apache-2.0) for federated analytics. The open-source engine underlying Starburst Galaxy. 10k+ GitHub stars. Connects to HDFS, S3, relational databases, Cassandra, Kafka, and more. Coordinator/worker architecture for horizontal scaling. Extensible connector design reduces integration complexity .
-
-
-
-- **[PrestoDB](https://github.com/prestodb/presto)**  
-
-  Distributed SQL query engine (Apache-2.0) originally developed at Facebook. Foundation for Presto Cloud and predecessor to Trino. 15k+ GitHub stars. SQL-on-Anything architecture with pluggable data source connectors. Optimized for low-latency interactive queries on big data .
-
-
-
-- **[Apache Calcite](https://github.com/apache/calcite)**  
-
-  Dynamic data management framework (Apache-2.0) providing SQL parsing, validation, and query optimization. Foundation for many data virtualization engines including Trino and Dremio. Pluggable adapter architecture for custom data sources.
-
-
-
-- **[Apache Drill](https://github.com/apache/drill)**  
-
-  Schema-free SQL query engine (Apache-2.0) for Hadoop, NoSQL, and cloud storage. Features self-describing data exploration without schema definitions. 3k+ GitHub stars. Supports nested data and schema discovery at query time.
-
-
-
-- **[Apache Arrow](https://github.com/apache/arrow)**  
-
-  Cross-language development platform (Apache-2.0) for in-memory data. Columnar format enabling zero-copy data exchange between query engines, pandas, and databases. Foundation for high-performance data virtualization—Dremio uses Arrow Flight for JDBC/ODBC/REST access .
-
-
-
-- **[Substrait](https://github.com/substrait-io/substrait)**  
-
-  Cross-language specification (Apache-2.0) for representing query plans. Enables interoperability between different query engines and data sources. Emerging standard for data virtualization portability.
-
-
-
-- **[Apache Iceberg](https://github.com/apache/iceberg)**  
-
-  Open table format (Apache-2.0) for huge analytic datasets. Enables multiple query engines (Trino, Spark, Flink) to access the same data. Dremio's catalog is Iceberg REST Catalog SPEC compatible, allowing connection from any Iceberg-supporting tool .
-
-
-
-- **[MCP Server (Dremio)](https://github.com/dremio/dremio-mcp)**  
-
-  Open-source MCP server for Dremio (license varies). Connects AI agents (Claude, Cursor) to Dremio instances for natural language data querying. Part of Dremio Cloud's hosted MCP integration .
-
-
-
-- **[Presto Gateway](https://github.com/prestodb/presto-gateway)**  
-
-  Proxy and load balancer for Presto clusters (Apache-2.0). Routes queries to appropriate clusters, supports dynamic cluster registration, and enables query queuing.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[Apache Hive](https://github.com/apache/hive)** — Data warehouse software (Apache-2.0) for reading, writing, and managing large datasets in distributed storage.
-
-- **[Apache Spark SQL](https://github.com/apache/spark)** — Spark module (Apache-2.0) for structured data processing with DataFrame API and SQL support.
-
-- **[Metabase](https://github.com/metabase/metabase)** — Open-source BI tool (AGPL-3.0) with native query support and data virtualization via JDBC drivers.
-
-- **[Apache Superset](https://github.com/apache/superset)** — Open-source BI platform (Apache-2.0) with SQL Lab for federated querying across databases.
-
-- Community **n8n** workflows for data virtualization automation and cross-source orchestration.
-
-
-
-**Frameworks for building custom systems**: Combine **Trino** or **PrestoDB** as the federated query engine with **Apache Iceberg** for open table format storage, **Apache Arrow** for high-performance data exchange, **Apache Calcite** for SQL optimization, and **PostgreSQL** for metadata persistence — creating a fully self-hosted, enterprise-grade external data virtualization platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Data virtualization platforms handling enterprise data must comply with data protection regulations (GDPR, CCPA, etc.) and data residency requirements.
-
-- Self-hosted open-source solutions require proper security hardening, query performance tuning, and ongoing maintenance. Zero-copy architectures reduce data movement risk but introduce query-time dependencies on source system availability.
-
-
+</div>
 
 ---
 
+## 📖 Overview & SEO Summary
 
+**External Data Virtualization** (also known as *data federation*, *logical data fabric*, and *zero-copy data architecture*) enables modern enterprises and data engineers to query, blend, and analyze distributed data across heterogeneous sources—relational databases, NoSQL stores, cloud data lakes, object storage (S3/GCS/Azure Blob), SaaS applications, and REST/GraphQL APIs—**in real time without physical replication, heavy ETL pipelines, or data movement**.
 
-**Made for data engineers, architects, analytics teams, and developers building transparent data virtualization solutions.**  
+By decoupling physical storage from the presentation and analytics layer, data virtualization provides a unified, high-performance semantic catalog with centralized governance, reduced infrastructure expenses, and instant compliance with data sovereignty regulations (GDPR, HIPAA, CCPA).
 
-Let's make External Data Virtualization more open, data-driven, and efficient.
+### 🔑 Key Search Topics & Concepts
+`data-virtualization` • `federated-query` • `zero-copy-architecture` • `logical-data-warehouse` • `data-fabric` • `distributed-sql` • `trino` • `presto` • `duckdb` • `apache-iceberg` • `apache-arrow` • `query-federation` • `lakehouse`
+
+---
+
+## 🧭 Table of Contents
+
+- [📈 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Data Virtualization Platforms](#️-saas--hosted-data-virtualization-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🏗️ Recommended Architectural Blueprints](#️-recommended-architectural-blueprints)
+- [🌟 Star History](#-star-history)
+- [💖 Support & Community](#-support--community)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📜 Disclaimer](#-disclaimer)
+
+---
+
+## 📈 Sector Overview & Market Dynamics
+
+The global **Data Virtualization and Logical Data Integration market** is valued at approximately **$5.40 billion to $6.68 billion in 2025** and is projected to reach **$7.24 billion to $8.10 billion in 2026**, expanding at a Compound Annual Growth Rate (**CAGR of 18.5% to 19.4%**) and on track to surpass **$15 billion** by the early 2030s.
+
+The sector is **moderately fragmented** rather than a winner-take-all monopoly:
+- **Legacy & Dedicated Enterprise Specialists** (such as Denodo, IBM, and TIBCO) maintain deep moats in complex hybrid-cloud, enterprise governance, and legacy ERP/mainframe connector ecosystems.
+- **Hyperscaler Cloud Ecosystems** (such as AWS Athena, Salesforce Connect, and Google BigQuery Omni) dominate within their respective clouds by offering serverless zero-copy interfaces directly tied to native storage and business applications.
+- **Next-Gen Open-Core & Lakehouse Federation Disruptors** (such as Starburst, Dremio, and CData) are capturing high-growth analytical workloads by pairing open table formats (Apache Iceberg, Delta Lake) with distributed engines (Trino, Apache Arrow) and Model Context Protocol (MCP) integrations for AI agents.
+
+Because enterprises frequently operate across hybrid multi-cloud environments with distinct governance, latency, and budget requirements, multi-engine and heterogeneous virtualization stacks remain the prevailing architectural pattern.
+
+---
+
+## ☁️ SaaS & Hosted Data Virtualization Platforms
+
+The table below lists leading managed data virtualization SaaS products, sorted **descending by company scale** (market cap / valuation / revenue).
+
+| 🏢 Platform | 🏷️ Company &amp; Scale (Valuation / Revenue) | ⚙️ Virtualization Capabilities | 💳 Starting Tier Pricing | 🎁 Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[AWS Athena](https://aws.amazon.com/athena/)** | **Amazon / AWS**<br>• Market Cap: **~$2.1 Trillion**<br>• Revenue: **~$105 Billion** (AWS ARR) | Serverless interactive federated SQL query engine analyzing data directly in Amazon S3, DynamoDB, relational databases, and third-party APIs via Athena Federated Query connectors. | **$5.00 per TB** of data scanned (rounded up to 10 MB per query); Apache Spark compute at **$0.35 per DPU-hour**. | **1 TB data scanned/month free** for the first 12 months under AWS Free Tier. Pay only for S3 storage used. |
+| **[Salesforce Connect](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/platform_connect_intro.htm)** | **Salesforce, Inc.**<br>• Market Cap: **~$280 Billion**<br>• Revenue: **~$35 Billion** ARR | Surfaces external datasets as native Salesforce External Objects via OData 2.0/4.0, GraphQL, and custom Apex connectors with real-time zero-copy querying and strict data sovereignty compliance. | **$4,000 per month per connection** ($48,000/year billed annually as an add-on license for Enterprise or Unlimited Edition). | **Free forever in Developer Edition org** (1 external data source connection with up to 10,000 OData callouts/hour for dev & test); 30-day Enterprise trial on request. |
+| **[IBM Cloud Pak for Data (Watson Query)](https://www.ibm.com/products/cloud-pak-for-data)** | **IBM Corp.**<br>• Market Cap: **~$215 Billion**<br>• Revenue: **~$62 Billion** ARR | Enterprise distributed semantic layer (Watson Query) unifying multi-cloud relational and unstructured repositories under a single governed virtual interface integrated with IBM Knowledge Catalog. | **$1.02 per Resource Unit (RU)-hour** (or $0.56 per VPC-hour pay-as-you-go; base self-managed cartridge software starting at ~$1,500/month). | **30-day free trial with $200 IBM Cloud credits** + permanent **Lite Plan** for select services (capped at 1,000 query-seconds and 1 vCPU evaluation environment). |
+| **[TIBCO Data Virtualization](https://www.tibco.com/products/data-virtualization)** | **Cloud Software Group (TIBCO / Citrix)**<br>• Valuation: **~$16.5 Billion**<br>• Revenue: **~$3.2 Billion** ARR | Mature enterprise logical data fabric with 350+ pre-built connectors, advanced query pushdown optimization, MPP cluster scaling, logical data modeling, and business directory services. | **~$2,200 per month** ($26,400/year base server license) or ~$1,500/core/month on enterprise annual agreements. | **30-day evaluation trial** (limited to 1 server instance and up to 5 concurrent connected external data sources with full Studio design tool access). |
+| **[Denodo Platform](https://www.denodo.com/)** | **Denodo Technologies**<br>• Valuation: **~$3.5 Billion** (TPG Series B)<br>• Revenue: **~$288 Million** ARR | Pure-play logical data management platform offering 200+ connectors, AI-assisted semantics, smart MPP query acceleration, universal data services (SQL, REST, GraphQL), and isolated control/execution planes. | **$6.27 per hour** on AWS/Azure Marketplace (~$1,800/month for Denodo Professional 1-node subscription + 2 connectors). | **30-day free trial on AWS/Azure/GCP Marketplace** (100% software license fees waived for 30 days, up to 5 data sources; cloud infrastructure costs billed separately). |
+| **[Starburst Galaxy](https://www.starburst.io/)** | **Starburst Data**<br>• Valuation: **~$3.35 Billion** (Series D)<br>• Revenue: **~$100+ Million** ARR | Fully managed SaaS powered by Trino for federated analytics across hybrid and multi-cloud data lakes, object stores, and warehouses with Warp Speed indexing and automated access control. | **$0.40 – $0.75 per Starburst Credit (SCU)** (a standard 2-worker cluster consumes 12 credits/hour, totaling ~$4.80–$9.00/hour of active cluster runtime). | **30-day free trial with $500 in compute credits** with full Enterprise features; automatically downgrades to **Free-Forever tier** (run up to 3 clusters, pay only cloud hosting). |
+| **[Dremio Cloud](https://www.dremio.com/)** | **Dremio Corporation**<br>• Valuation: **~$2.0 Billion** (Series E)<br>• Revenue: **~$80+ Million** ARR | Lakehouse virtualization engine native to Apache Iceberg and Apache Arrow; provides federated queries, autonomous reflections for sub-second acceleration, Git-for-data catalogs, and hosted AI MCP servers. | **$0.20 per Dremio Compute Unit (DCU) / hour** (billed per second with 60-second minimum; engines automatically pause and scale to zero when idle). | **Free-Forever Standard Edition** ($0 software fees, up to 10 users, 200 tables, 1,000 views, capped at Small engine sizes; bring your own AWS/Azure compute) + **30-day Enterprise trial with $400 credits**. |
+| **[CData Connect Cloud](https://www.cdata.com/cloud/)** | **CData Software**<br>• Valuation: **~$800M – $1.2 Billion** (Warburg Pincus/Accel)<br>• Revenue: **~$100 Million** ARR | Data Connectivity-as-a-Service providing real-time virtualization across 300+ SaaS apps, ERPs, databases, and APIs via standard SQL, OData, and Model Context Protocol (MCP) toolsets for AI agents. | **$79 per month** (billed annually, or $99/month billed monthly) for Standard Plan (includes 1 user, 1 Standard data source, and up to 10 connections). | **14-day fully featured free trial** (unlimited queries, test connections for up to 5 data sources, full API & connector catalog, zero credit card required). |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Curated list of active open-source query engines, semantic layers, and protocols for data virtualization—**sorted descending by GitHub star count**.
+
+1. **[Apache Superset](https://github.com/apache/superset)** [![GitHub stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) — Modern open-source data exploration and business intelligence platform; features **SQL Lab** for interactive federated queries across multiple databases and analytical engines via extensible SQLAlchemy dialects.
+2. **[Metabase](https://github.com/metabase/metabase)** [![GitHub stars](https://img.shields.io/github/stars/metabase/metabase?style=social&color=white)](https://github.com/metabase/metabase/stargazers) — User-friendly open-source business intelligence and embedded analytics tool with native cross-database connectivity, providing a unified logical view of relational and NoSQL stores via JDBC.
+3. **[Apache Spark SQL](https://github.com/apache/spark)** [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) — Unified distributed engine for large-scale data processing; Spark SQL provides unified DataFrame abstractions, predicate pushdown, and federated queries across Hive, JDBC, Parquet, Delta Lake, and Iceberg.
+4. **[DuckDB](https://github.com/duckdb/duckdb)** [![GitHub stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers) — Fast in-process SQL OLAP database management system with zero-copy vectorized execution; seamlessly queries external files and databases in place via extensions (`httpfs`, `postgres_scanner`, `sqlite_scanner`, `iceberg`, `delta`, `s3`).
+5. **[Hasura GraphQL Engine](https://github.com/hasura/graphql-engine)** [![GitHub stars](https://img.shields.io/github/stars/hasura/graphql-engine?style=social&color=white)](https://github.com/hasura/graphql-engine/stargazers) — High-performance data federation engine providing instant GraphQL and REST APIs with fine-grained access control across PostgreSQL, MySQL, SQL Server, BigQuery, and Snowflake without replication.
+6. **[Cube Core](https://github.com/cube-js/cube)** [![GitHub stars](https://img.shields.io/github/stars/cube-js/cube?style=social&color=white)](https://github.com/cube-js/cube/stargazers) — Open-source universal semantic layer and data virtualization platform for AI, BI, and embedded analytics; standardizes metrics, orchestrates pre-aggregations, and federates queries across multi-cloud databases.
+7. **[Apache Arrow](https://github.com/apache/arrow)** [![GitHub stars](https://img.shields.io/github/stars/apache/arrow?style=social&color=white)](https://github.com/apache/arrow/stargazers) — Universal columnar in-memory data format and multi-language toolbox; enables zero-copy data exchange across heterogeneous query engines and analytical frameworks via **Arrow Flight** and **Flight SQL**.
+8. **[PrestoDB](https://github.com/prestodb/presto)** [![GitHub stars](https://img.shields.io/github/stars/prestodb/presto?style=social&color=white)](https://github.com/prestodb/presto/stargazers) — Distributed SQL query engine originally developed at Meta; "SQL-on-Anything" architecture with pluggable connectors for HDFS, S3, Cassandra, Kafka, and relational databases for low-latency interactive queries.
+9. **[Apache Doris](https://github.com/apache/doris)** [![GitHub stars](https://img.shields.io/github/stars/apache/doris?style=social&color=white)](https://github.com/apache/doris/stargazers) — High-performance real-time MPP analytical database featuring **Multi-Catalog federation**; executes lightning-fast queries directly against Apache Iceberg, Hudi, Paimon, Hive, and transactional systems without ETL copying.
+10. **[Trino](https://github.com/trinodb/trino)** [![GitHub stars](https://img.shields.io/github/stars/trinodb/trino?style=social&color=white)](https://github.com/trinodb/trino/stargazers) — Premier distributed SQL query engine for big data and federated analytics; enables federated joins across data lakes, warehouses, relational databases, and streaming sources at massive scale.
+11. **[StarRocks](https://github.com/StarRocks/starrocks)** [![GitHub stars](https://img.shields.io/github/stars/StarRocks/starrocks?style=social&color=white)](https://github.com/StarRocks/starrocks/stargazers) — Linux Foundation sub-second MPP query engine supporting unified multi-source data lakehouse federation (Iceberg, Delta Lake, Hudi) and external table virtualization with vectorized execution.
+12. **[Apache DataFusion](https://github.com/apache/datafusion)** [![GitHub stars](https://img.shields.io/github/stars/apache/datafusion?style=social&color=white)](https://github.com/apache/datafusion/stargazers) — Ultra-fast, extensible SQL query engine written in Rust and powered by Apache Arrow; popular modular foundation for building high-performance federated data virtualization layers.
+13. **[Apache Iceberg](https://github.com/apache/iceberg)** [![GitHub stars](https://img.shields.io/github/stars/apache/iceberg?style=social&color=white)](https://github.com/apache/iceberg/stargazers) — Open table format for huge analytic datasets; enables concurrent multi-engine access (Trino, Spark, Flink, Dremio, DuckDB) against a single logical copy of data with ACID transactions.
+14. **[Apache Hive](https://github.com/apache/hive)** [![GitHub stars](https://img.shields.io/github/stars/apache/hive?style=social&color=white)](https://github.com/apache/hive/stargazers) — Distributed data warehouse software providing SQL abstraction over massive datasets stored in HDFS and object stores via the ubiquitous **Hive Metastore (HMS)**.
+15. **[Apache Calcite](https://github.com/apache/calcite)** [![GitHub stars](https://img.shields.io/github/stars/apache/calcite?style=social&color=white)](https://github.com/apache/calcite/stargazers) — Dynamic data management framework providing SQL parsing, query planning, Cost-Based Optimization (CBO), and pluggable adapters for building custom federated virtualization engines.
+16. **[Spice](https://github.com/spiceai/spiceai)** [![GitHub stars](https://img.shields.io/github/spiceai/spiceai?style=social&color=white)](https://github.com/spiceai/spiceai/stargazers) — Portable, accelerated SQL query, search, and data virtualization engine written in Rust; federates queries across operational databases, data warehouses, and object stores for data-grounded AI apps and agents.
+17. **[Apache Kyuubi](https://github.com/apache/kyuubi)** [![GitHub stars](https://img.shields.io/github/apache/kyuubi?style=social&color=white)](https://github.com/apache/kyuubi/stargazers) — Distributed multi-tenant gateway providing serverless SQL on data lakes and federated query engines (Spark, Trino, Flink) via standard JDBC/ODBC protocols.
+18. **[Apache Drill](https://github.com/apache/drill)** [![GitHub stars](https://img.shields.io/github/stars/apache/drill?style=social&color=white)](https://github.com/apache/drill/stargazers) — Schema-free SQL query engine for Hadoop, NoSQL, and cloud storage; supports self-describing data exploration and dynamic schema discovery at query execution time.
+19. **[Substrait](https://github.com/substrait-io/substrait)** [![GitHub stars](https://img.shields.io/github/stars/substrait-io/substrait?style=social&color=white)](https://github.com/substrait-io/substrait/stargazers) — Cross-language specification for representing relational algebra and query plans; enables seamless query interoperability between distinct federated engines and storage backends.
+20. **[GlareDB](https://github.com/GlareDB/glaredb)** [![GitHub stars](https://img.shields.io/github/stars/GlareDB/glaredb?style=social&color=white)](https://github.com/GlareDB/glaredb/stargazers) — Fast, lightweight SQL database for hybrid analytics across disparate sources; combines local files, cloud storage, Postgres, Snowflake, and ClickHouse into unified queries.
+21. **[Teiid](https://github.com/teiid/teiid)** [![GitHub stars](https://img.shields.io/github/stars/teiid/teiid?style=social&color=white)](https://github.com/teiid/teiid/stargazers) — Battle-tested open-source data virtualization system (Red Hat/JBoss) that unifies data from multiple heterogeneous stores into a single relational view.
+22. **[Trino Gateway](https://github.com/trinodb/trino-gateway)** [![GitHub stars](https://img.shields.io/github/stars/trinodb/trino-gateway?style=social&color=white)](https://github.com/trinodb/trino-gateway/stargazers) — Proxy and smart load balancer for Trino clusters, managing dynamic cluster routing, query queuing, failover, and high-concurrency query federation.
+23. **[Dremio MCP Server](https://github.com/dremio/dremio-mcp)** [![GitHub stars](https://img.shields.io/github/stars/dremio/dremio-mcp?style=social&color=white)](https://github.com/dremio/dremio-mcp/stargazers) — Open-source Model Context Protocol (MCP) server for Dremio; connects AI agents (Claude, Cursor) directly to Dremio instances for natural-language querying of virtual datasets.
+
+---
+
+## 🏗️ Recommended Architectural Blueprints
+
+```
+                     ┌──────────────────────────────────────────────┐
+                     │          CONSUMPTION & ANALYTICS             │
+                     │  BI Dashboards • AI Agents • REST/GraphQL    │
+                     └──────────────────────┬───────────────────────┘
+                                            │
+                                            ▼
+                     ┌──────────────────────────────────────────────┐
+                     │          VIRTUAL LOGICAL DATA LAYER          │
+                     │  • Federated Query Engines (Trino / DuckDB)  │
+                     │  • Semantic Governance (Cube / OpenFGA)      │
+                     │  • In-Memory Interop (Apache Arrow Flight)   │
+                     │  • Query Optimizer (Apache Calcite)          │
+                     └──────────────────────┬───────────────────────┘
+                                            │  Zero-Copy Live Access
+                  ┌─────────────────────────┼─────────────────────────┐
+                  ▼                         ▼                         ▼
+         ┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
+         │ Relational / SQL │      │ Open Lakehouse   │      │ APIs & SaaS      │
+         │ Postgres / MySQL │      │ Iceberg / S3     │      │ Salesforce / REST│
+         └──────────────────┘      └──────────────────┘      └──────────────────┘
+```
+
+- **Enterprise Self-Hosted Stack:** Deploy **Trino** or **Apache Doris** as the distributed query engine, backed by **Apache Iceberg** for ACID lake storage, **Apache Arrow Flight** for low-overhead client transmission, and **Apache Calcite** for rule-based query optimization.
+- **Embedded & Lightweight Stack:** Embed **DuckDB** or **Apache DataFusion** directly within microservices or data science environments to run federated zero-copy queries against local parquet files, AWS S3 buckets, and PostgreSQL instances without deploying cluster infrastructure.
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-External-Data-Virtualization&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-External-Data-Virtualization&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community
+
+Thank you for exploring and using **Awesome-External-Data-Virtualization**! If this curated guide helps you architect zero-copy data layers or choose the right federated query engine, please consider supporting the project:
+
+- ⭐ **Star this repository** on GitHub to help others discover it.
+- 🍴 **Fork the repo** and contribute additions or updates.
+- 📢 **Share with your network** on LinkedIn, X/Twitter, or Reddit.
+- ☕ **Sponsor or Buy Me a Coffee:** Support ongoing maintenance and open-source curation on the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 🤝 How to Contribute
+
+Contributions from data engineers, enterprise architects, and open-source maintainers are warmly welcome!
+
+1. 🍴 **Fork the repository**.
+2. 🌿 **Create a new branch** (`git checkout -b feature/add-tool-name`).
+3. 📝 **Add or edit entries in `README.md`** following the established format:
+   - For SaaS products: Include name, official link, company scale, description, starting price, and specific free tier/trial limits.
+   - For Open-Source projects: Include name, GitHub link, star badge, and an accurate 1–2 sentence capability summary.
+4. 🚀 **Submit a Pull Request** with a concise description of your changes.
+
+---
+
+## 📜 Disclaimer
+
+- This is a community-curated directory intended for research, educational, and architectural benchmarking purposes. It does not constitute a commercial endorsement.
+- All trademarks, service marks, and company names are the property of their respective owners.
+- Data virtualization platforms accessing production enterprise systems must be secured in compliance with applicable data residency and security standards (SOC 2, GDPR, HIPAA, CCPA).
+- Zero-copy query federation reduces data replication overhead, but query latency depends on source database capacity and network bandwidth.
+
+---
+
+<div align="center">
+  <b>Built with ❤️ for data engineers, enterprise architects, and developers shaping the zero-copy data future.</b>
+</div>
